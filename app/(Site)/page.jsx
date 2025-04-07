@@ -50,12 +50,12 @@ export default async function Home() {
 
       {/* <Headaches homeData={homeData} /> */}
 
-      <Process homeData={homeData} />
+      <Team teamData={teamData} />
 
       <Testimonials testimonialsData={testimonialsData} />
 
-      <Team teamData={teamData} />
-
+      <Process homeData={homeData} />
+      
       <FaqCta faqs={faqData} />
     </>
   );

@@ -43,12 +43,27 @@ const FaqCta = ({ faqs }) => {
                 <hr />
                 {faqs.map((item) => (
                   <Accordion type="single" collapsible>
-                    {item.questions.map((data, index) => (
+                    {item.faqType.map((data, index) => (
                       <AccordionItem value={index + 1}>
-                        <AccordionTrigger className="text-[#002866]">
-                          {data.question}
+                        <AccordionTrigger className="text-[#002866] text-lg">
+                          {data.title}
                         </AccordionTrigger>
-                        <AccordionContent>{data.answer}</AccordionContent>
+                        <AccordionContent>
+                          <div>
+                            <Accordion type="single" collapsible>
+                              {data.questions.map((data, index) => (
+                                <AccordionItem value={index + 1}>
+                                  <AccordionTrigger className="text-[#002866] text-md">
+                                    {data.question}
+                                  </AccordionTrigger>
+                                  <AccordionContent>
+                                    {data.answer}
+                                  </AccordionContent>
+                                </AccordionItem>
+                              ))}
+                            </Accordion>
+                          </div>
+                        </AccordionContent>
                       </AccordionItem>
                     ))}
                   </Accordion>

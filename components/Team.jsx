@@ -46,7 +46,7 @@ const Team = ({ teamData }) => {
       {
         breakpoint: 591,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],

@@ -19,22 +19,39 @@ export default {
       type: "string",
     },
     {
-      name: "questions",
-      title: "Questions",
+      name: "faqType",
+      title: "FAQ Type",
       type: "array",
       of: [
         {
           type: "object",
           fields: [
             {
-              name: "question",
-              title: "Question",
+              name: "title",
+              title: "Title",
               type: "string",
             },
             {
-              name: "answer",
-              title: "Answer",
-              type: "string",
+              name: "questions",
+              title: "Questions",
+              type: "array",
+              of: [
+                {
+                  type: "object",
+                  fields: [
+                    {
+                      name: "question",
+                      title: "Question",
+                      type: "string",
+                    },
+                    {
+                      name: "answer",
+                      title: "Answer",
+                      type: "string",
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },

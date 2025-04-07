@@ -153,10 +153,13 @@ export async function getFaqData() {
         metaTitle,
         metaDescription,
         metaKeywords,
+        faqType[]{
+        title,
         questions[]{
           question,
           answer,
-        }
+        },
+        },       
       }`,
     {},
     defaultFetchOptions

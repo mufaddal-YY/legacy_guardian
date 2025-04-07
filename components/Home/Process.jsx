@@ -28,7 +28,7 @@ const Process = ({ homeData }) => {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col rounded-lg border-2 md:flex-row lg:flex-row gap-2 mb-8">
+              {/* <div className="flex flex-col rounded-lg border-2 md:flex-row lg:flex-row gap-2 mb-8">
                 {item.process.map((data) => (
                   <div className="w-full flex md:w-1/3 lg:w-1/3  items-center gap-4 p-4">
                     <Image
@@ -42,13 +42,13 @@ const Process = ({ homeData }) => {
                       <h3 className="text-lg font-medium text-gray-700 ">
                         {data.title}
                       </h3>
-                      {/* <p className="text-[10px] text-gray-600 font-light">
+                      <p className="text-[10px] text-gray-600 font-light">
                         {data.description}
-                      </p> */}
+                      </p>
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
               <div className="py-2 lg:py-12 w-full hidden md:flex lg:flex justify-center ">
                 {timeline}
               </div>

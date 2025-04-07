@@ -6,7 +6,7 @@ const ProblemSlider = ({ homeData }) => {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
@@ -17,7 +17,7 @@ const ProblemSlider = ({ homeData }) => {
       {
         breakpoint: 1280,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 3,
         },
       },
       {
@@ -51,13 +51,13 @@ const ProblemSlider = ({ homeData }) => {
                 <div className="rounded-xl">
                   <div className="text-center items-center">
                     <div>
-                      <h4 className="text-sm font-regular text-gray-800">
+                      <h4 className="text-md lg:text-sm font-regular text-gray-800">
                         {item?.caption}
                       </h4>
                     </div>
                     <div>
                       <Image
-                        width={250}
+                        width={300}
                         height={180}
                         src={item?.sliderImage}
                         alt=""

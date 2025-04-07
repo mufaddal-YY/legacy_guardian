@@ -31,31 +31,10 @@ const HeroBanner = ({ homeData }) => {
   return (
     <>
       <main className="w-full items-center justify-center">
-        <section className="py-[80px] bg-white">
+        <section className="py-[30px] bg-white">
           <div className="container flex flex-col lg:flex-row items-center justify-between">
             {/* Left Text Content */}
-            <article className="w-full lg:w-1/2 mb-8 lg:mb-0">
-              <div className="mx-auto text-center lg:text-left relative mt-8 lg:mt-14 py-4">
-                <h4 className="lg:text-2xl text-lg font-regular tracking-wide text-[#002866]">
-                  Multiple Properties, Zero Stress
-                </h4>
-                <h2
-                  className={`text-[32px] lg:text-4xl py-4 font-semibold text-[#002866] relative ${amiri.className}`}>
-                  <span className="z-8 relative inline-block">
-                    <span className="absolute items-center mt-6 lg:mt-4 opacity-[0.75]">
-                      {icon}
-                    </span>
-                    Experience Hassle-Free Ownership with Legacy Guardians.
-                  </span>
-                </h2>
-              </div>
-              <div className="py-2">
-                <ProblemSlider homeData={homeData} />
-              </div>
-            </article>
-
-            {/* Right Video */}
-            <article className="w-full lg:w-1/2 flex justify-center lg:p-4">
+            <article className="w-full lg:w-1/2 flex justify-center lg:p-4 lg:order-2 mt-12">
               <div
                 className="relative rounded-2xl overflow-hidden w-full mt-4"
                 style={{ paddingTop: "56.25%" }}>
@@ -71,6 +50,30 @@ const HeroBanner = ({ homeData }) => {
                 />
               </div>
             </article>
+            <article className="w-full lg:w-1/2 mb-8 lg:mb-0">
+              <div className="mx-auto text-center lg:text-left relative mt-8 lg:mt-14 py-2">
+                <h4 className="lg:text-2xl text-lg font-regular tracking-wide text-[#002866]">
+                  Multiple Properties, Zero Stress
+                </h4>
+                <h2
+                  className={`text-[32px] lg:text-4xl py-4 font-semibold text-[#002866] relative ${amiri.className}`}>
+                  <span className="relative inline-block">
+                    {/* Icon behind text, same position on all screens */}
+                    <span className="absolute top-6 opacity-75 z-10">
+                      {icon}
+                    </span>
+                    <span className="relative z-20">
+                      Experience Hassle-Free Ownership with Legacy Guardians.
+                    </span>
+                  </span>
+                </h2>
+              </div>
+              <div className="py-1">
+                <ProblemSlider homeData={homeData} />
+              </div>
+            </article>
+
+            {/* Right Video */}
           </div>
         </section>
       </main>

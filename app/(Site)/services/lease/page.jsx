@@ -16,6 +16,13 @@ const Lease = async () => {
       <section className="py-[50px] bg-white flex items-center justify-center">
         <div className="container">
           <div className="flex flex-col">
+            <div className="py-2 lg:py-12 w-full hidden md:flex lg:flex justify-center">
+              {leaseImg}
+            </div>
+
+            <div className="w-full flex md:hidden lg:hidden justify-center ">
+              {leaseImg1}
+            </div>
             <MainContent mainData={leaseData} />
             {leaseData.map((item) => (
               <div>
@@ -27,13 +34,6 @@ const Lease = async () => {
                 ))}
               </div>
             ))}
-            <div className="py-2 lg:py-12 w-full hidden md:flex lg:flex justify-center">
-              {leaseImg}
-            </div>
-
-            <div className="w-full flex md:hidden lg:hidden justify-center ">
-              {leaseImg1}
-            </div>
           </div>
         </div>
       </section>

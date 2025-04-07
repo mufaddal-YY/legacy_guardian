@@ -36,11 +36,11 @@ const AboutSection = ({ homeData }) => {
                   </p>
                 </div>
                 <div className="flex md:flex-row lg:flex-row py-8 gap-4">
-                  {item.stats.map((data) => (
-                    <div className="w-1/2 md:w-1/4 lg:w-1/4">
+                  {item.stats.map((data, index) => (
+                    <div key={index} className="w-1/2 md:w-1/4 lg:w-1/4">
                       <div className="text-lg md:text-2xl lg:text-3xl font-medium text-gray-600">
                         <CountUp start={0} end={parseInt(data.statNumber)} />
-                        <span>+</span>
+                        <span>{index === 2 ? "%" : "+"}</span>
                       </div>
                       <div>
                         <p className="py-1 text-xs text-gray-500 font-regular">
