@@ -53,10 +53,10 @@ const FaqCta = ({ faqs }) => {
                             <Accordion type="single" collapsible>
                               {data.questions.map((data, index) => (
                                 <AccordionItem value={index + 1}>
-                                  <AccordionTrigger className="text-[#002866] text-md">
+                                  <AccordionTrigger className="text-gray-700 text-md">
                                     {data.question}
                                   </AccordionTrigger>
-                                  <AccordionContent>
+                                  <AccordionContent className="text-gray-600">
                                     {data.answer}
                                   </AccordionContent>
                                 </AccordionItem>

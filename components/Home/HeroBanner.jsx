@@ -59,10 +59,10 @@ const HeroBanner = ({ homeData }) => {
                   className={`text-[32px] lg:text-4xl py-4 font-semibold text-[#002866] relative ${amiri.className}`}>
                   <span className="relative inline-block">
                     {/* Icon behind text, same position on all screens */}
-                    <span className="absolute top-6 opacity-75 z-10">
+                    <span className="absolute top-6 opacity-75 z-1">
                       {icon}
                     </span>
-                    <span className="relative z-20">
+                    <span className="relative z-2">
                       Experience Hassle-Free Ownership with Legacy Guardians.
                     </span>
                   </span>
