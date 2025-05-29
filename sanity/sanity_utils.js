@@ -166,3 +166,30 @@ export async function getFaqData() {
   );
   return result;
 }
+
+export async function getBlogData() {
+  const result = await client.fetch(
+    groq`*[_type == "blog"] | order(publishedAt desc){
+      _id,
+      _createdAt,
+      title,
+      "slug": slug.current,
+      publishedAt,
+      metaTitle,
+      metaDescription,
+      metaKeywords,
+      excerpt,
+      "mainImage": mainImage.asset->url,
+      author,
+      content[]{
+        ...,
+        _type == "image" => {
+          "asset": asset->url
+        }
+      }
+    }`,
+    {},
+    defaultFetchOptions
+  );
+  return result;
+}
