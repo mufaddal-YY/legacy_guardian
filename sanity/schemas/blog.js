@@ -72,14 +72,7 @@ export default {
           type: "image",
           options: { hotspot: true },
         },
-        {
-          type: "code",
-          title: "Code Block",
-          options: {
-            language: "javascript",
-            theme: "github",
-          },
-        },
+        
       ],
     },
   ],
