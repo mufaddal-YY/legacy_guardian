@@ -181,12 +181,6 @@ export async function getBlogData() {
       excerpt,
       "mainImage": mainImage.asset->url,
       author,
-      content[]{
-        ...,
-        _type == "image" => {
-          "asset": asset->url
-        }
-      }
     }`,
     {},
     defaultFetchOptions

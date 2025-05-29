@@ -1,6 +1,6 @@
 import FaqCta from "@/components/FaqCta";
 import PageBanner from "@/components/PageBanner";
-import { getBlogData, getFaqData } from "@/sanity/sanity_utils";
+import { getBlogDetailData, getFaqData } from "@/sanity/sanity_utils";
 
 export default async function BlogDetail({ params }) {
   const { slug } = await params; // Await params here
@@ -9,7 +9,7 @@ export default async function BlogDetail({ params }) {
 
   return (
     <>
-      <PageBanner heading="Blogs" />
+      <PageBanner heading={blogDetail?.title} />
 
       <FaqCta faqs={faqData} />
     </>
