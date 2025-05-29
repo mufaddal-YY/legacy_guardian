@@ -162,6 +162,11 @@ export default function Header() {
             About
           </Link>
           <Link
+            href="/blogs"
+            className="text-md font-regular leading-6 text-gray-900 hover:text-[#dfa459] hover:duration-200">
+            Blogs
+          </Link>
+          <Link
             href="/contact"
             className="text-md font-regular leading-6 text-gray-900 hover:text-[#dfa459] hover:duration-200">
             Contact
@@ -303,6 +308,12 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="-mx-3 block rounded-lg px-3 py-2 text-md font-regular leading-7 text-gray-900 hover:bg-gray-50">
                   About
+                </Link>
+                <Link
+                  href="/blogs"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="-mx-3 block rounded-lg px-3 py-2 text-md font-regular leading-7 text-gray-900 hover:bg-gray-50">
+                  Blogs
                 </Link>
                 <Link
                   href="/contact"
